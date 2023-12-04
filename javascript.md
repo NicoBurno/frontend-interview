@@ -182,7 +182,8 @@ b.log(); // ?
 Проверка кодом:
 ```js
 // Три независимые строчки. Где будет блокировка?
-while (true) {}
-function loop1() { setTimeout(loop1, 0); }; loop1();
-function loop2() { return Promise.resolve(loop2) }; loop2();
+
+while (true) {} // ?
+function loop1() { setTimeout(loop1, 0); }; loop1(); // ?
+function loop2() { return Promise.resolve(loop2) }; loop2(); // ?
 ```
